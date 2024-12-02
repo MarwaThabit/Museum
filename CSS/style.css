@@ -1,0 +1,177 @@
+body{
+    background:url(../Images/bg.jpg)
+}
+.form-control::placeholder{
+    color: white;
+}
+header .logo{
+    box-shadow: 0px 0px 6px 3px rgba(255,255,255,0.2);
+}
+.carousel-inner img{
+    filter: brightness(0.8);
+}
+.bg1{
+    height:50vh;
+    background:url(../Images/image.jpeg) no-repeat fixed center/cover;
+}
+.bg2{
+    background:url(../Images/h3-rev-bg-img-4.jpg) no-repeat fixed center/cover;
+    filter:brightness(0.7);
+    height: 50vh;
+}
+.card-sec .row div .card img{
+    width: 93%; 
+    height: 450px;
+}
+.team-section .row div{
+    height:500px;
+}
+.news>div>div{
+    width: 76%;
+}
+.hr{
+    width: 10%;
+    height:5px
+}
+.news>div:nth-child(even) img{
+    clip-path: polygon(0 0, 70% 0%, 62% 100%, 0 100%);
+}
+.news>div:nth-child(odd) img{
+    clip-path: polygon(30% 0, 100% 0%, 100% 100%, 38% 100%);
+}
+textarea::placeholder{
+    color: rgb(82, 82, 82) !important;
+}
+.dropdown-item:hover{
+    background-color: rgb(42, 41, 41);
+}
+.modal-body button,.form-check-input:checked,.modal-footer button,.icons a:hover {
+    background-color: #9c7b5b !important;
+}
+.modal-footer button.btn:hover,.modal-body button:hover{
+    background-color: #c9ab81 !important; 
+}
+.form-check-input:not(:checked){
+    background-color: #dddede;
+}
+.cards-section .card,.card-img-overlay,footer .row  div p a,.team-section .card{
+    transition: 0.5s;
+}
+.form-control:focus{
+    border: 1px solid #c9ab81;
+}
+.card-sec .card::before,.card-sec .card::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 1s;
+}
+.card-sec .card::before{
+    inset: 0 auto auto 0;
+}
+.card-sec .card::after{
+    inset: auto 0 0 auto;
+}
+.card-sec .card:hover::before,.card-sec .card:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+}
+.team-section .card:hover{
+    transform: scale(0.98);
+}
+.team-section .card:hover .card-img-overlay{
+    background-color: rgba(50, 30, 70, 0.525) !important;
+}
+.team-section .card:hover .card-img-overlay div:first-child{
+    animation: move 1s forwards;
+}
+@keyframes move {
+    to{transform: translateY(20px);}
+}
+.news> div img {
+    width: 34%;
+    transition: transform 2s ease;
+}
+.news > div:hover img {
+    transform: scale(1.01); 
+}
+.news div:hover div .hr {
+    animation: expand 2s forwards;
+}
+@keyframes expand {
+    from{width: 0%;}
+    to { width: 10%;}
+}
+.popover{
+    border: none;
+    background-color: transparent;
+}
+.popover-body {
+    background-color: #dddede;
+    color: black;
+    border-radius: 0 20px 20px 20px;
+    padding: 2px 14px;
+    font-size: 21px;
+}
+.popover .popover-arrow,.tooltip .tooltip-arrow{
+    display: none;
+}
+.tooltip-inner {
+    background-color: #dddede;
+    color: black;
+    border-radius: 0 20px 20px 20px;
+    font-size: 21px;
+    padding: 8px;
+}
+footer .row div p a:hover{
+    color: #e3e2e2 !important;
+}
+.change::first-letter{
+    color:#eb8520;
+    font-size: 29px;
+}
+.shop .row div div{
+    background-color: #F1F1F1;
+}
+footer div div>span:first-of-type{
+    box-shadow: 0px 0px 6px 3px rgba(255,255,255,0.2);
+}
+.icons{
+    top: 135px;
+    right:18px;
+    z-index:1000
+}
+@media(max-width : 767px){
+    .news >div:nth-child(even),.news >div:nth-child(odd){
+        display: flex;
+        flex-direction: column !important;
+        height: 410px;
+    }
+    .news>div:nth-child(even) img,.news>div:nth-child(odd) img{
+        clip-path: none;
+        position: static !important;
+        width: 100%;
+        height: 50% !important;
+        border-bottom-left-radius:  0 !important;
+        border-bottom-right-radius: 0 !important;
+        order: 1;
+    }
+    .news > div:hover img {
+        transform: scale(1); 
+    }
+    .news>div>div:first-of-type{
+        width: 100% !important;
+        height: 50%;
+        order: 2;
+        padding-inline: 13px !important;
+    }
+    .news div:hover div .hr {
+        animation: none;
+    }
+    .hr{
+        width: 25%;
+    }
+}
